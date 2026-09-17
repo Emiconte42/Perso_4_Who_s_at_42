@@ -1,0 +1,617 @@
+/* ===========================
+   WHO'S @42 - Terminal Theme
+=========================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #080808;
+  color: #00ff88;
+  font-family: "JetBrains Mono", "Courier New", monospace;
+}
+
+main {
+  max-width: 1400px;
+  margin: 30px auto;
+  padding: 25px;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.app-header h1 {
+  margin: 0;
+}
+
+.header-stats {
+  display: flex;
+  gap: 25px;
+  font-size: 16px;
+}
+
+.header-stats span {
+  color: #6effb4;
+  font-weight: bold;
+}
+
+/* ===========================
+   DASHBOARD
+=========================== */
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 25px;
+  align-items: start;
+}
+
+/* ===========================
+   PANELS
+=========================== */
+
+.left-panel,
+.right-panel {
+  background: #0b0b0b;
+  border: 2px solid #00ff88;
+  border-radius: 10px;
+  padding: 22px;
+
+  transition: none;
+}
+
+/* ===========================
+   TITRES
+=========================== */
+
+h1 {
+  margin: 0 0 35px;
+  text-align: center;
+  font-size: 36px;
+  letter-spacing: 4px;
+  color: #00ff88;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 19px;
+  text-transform: uppercase;
+  color: #00ff88;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 17px;
+  color: #6effb4;
+}
+
+/* ===========================
+   TEXTE
+=========================== */
+
+p,
+span,
+label,
+td,
+th {
+  font-size: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 9px;
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+label:hover {
+  color: white;
+}
+
+/* ===========================
+   INPUTS
+=========================== */
+
+input[type="radio"] {
+  accent-color: #00ff88;
+  margin: 0;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+
+  background: #111;
+  color: #00ff88;
+
+  border: 1px solid #00ff88;
+  border-radius: 6px;
+
+  font-family: inherit;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 14px;
+
+  background: transparent;
+  color: #00ff88;
+
+  border: 2px solid #00ff88;
+  border-radius: 8px;
+
+  font-family: inherit;
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #00ff88;
+  color: black;
+}
+
+/* ===========================
+   BURGER
+=========================== */
+
+.burger-button {
+  display: none;
+
+  position: fixed;
+  top: 20px;
+  left: 20px;
+
+  width: 52px;
+  height: 52px;
+
+  margin: 0;
+  padding: 0;
+
+  border-radius: 10px;
+
+  font-size: 24px;
+
+  z-index: 2000;
+}
+
+/* ===========================
+   HR
+=========================== */
+
+hr {
+  border: none;
+  border-top: 1px dashed #00ff88;
+  opacity: .4;
+  margin: 28px 0;
+}
+
+/* ===========================
+   TABLE
+=========================== */
+
+table {
+    width:100%;
+    border-collapse:collapse;
+    table-layout:fixed;
+}
+
+th:nth-child(1),
+td:nth-child(1){
+    width:42%;
+}
+
+th:nth-child(2),
+td:nth-child(2){
+    width:17%;
+}
+
+th:nth-child(3),
+td:nth-child(3){
+    width:21%;
+}
+
+th:nth-child(4),
+td:nth-child(4){
+    width:20%;
+}
+
+thead {
+  background: transparent;
+}
+th {
+  padding: 14px;
+
+  text-align: center;
+
+  border-bottom: 1px solid #00ff88;
+  border-right: 1px dashed #00ff8840;
+
+  color: #00ff88;
+}
+
+th:last-child {
+  border-right: none;
+}
+
+td {
+  padding: 14px;
+  border-right: 1px dashed #00ff8830;
+}
+
+td:last-child {
+  border-right: none;
+}
+
+/* Lignes des présents */
+
+.present-row td {
+  border-bottom: 1px dashed #00ff8855;
+}
+
+.present-row:last-of-type td {
+  border-bottom: 1px dashed #00ff8855;
+}
+
+/* Lignes des absents */
+
+.absent-row td {
+  border-bottom: 1px dashed #333;
+}
+
+/* Dernière ligne : plus de bordure */
+
+.absent-row:last-child td {
+  border-bottom: 1px dashed rgba(0, 255, 136, 0.35);
+}
+
+tbody tr {
+  transition: none;
+}
+
+tbody tr:hover {
+  background: transparent;
+}
+
+/* ===========================
+   FIELDSET
+=========================== */
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+fieldset:disabled {
+  opacity: .35;
+}
+
+/* ===========================
+   BARRES
+=========================== */
+
+.progress {
+  flex: 1;
+  height: 10px;
+
+  background: #161616;
+
+  border: 1px solid #00ff8830;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #00ff88;
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width: 950px) {
+
+main {
+  width: 100%;
+  padding: 50px;
+  margin: 0;
+}
+
+  .burger-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dashboard {
+    display: block;
+  }
+
+  .left-panel {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 320px;
+    max-width: 85vw;
+
+    height: 100vh;
+
+    overflow-y: auto;
+
+    border-radius: 0;
+
+    z-index: 1500;
+
+    transition: transform .25s ease;
+
+  }
+
+  .left-panel-open {
+    transform: translateX(0);
+  }
+
+  .left-panel-closed {
+    transform: translateX(-105%);
+  }
+
+.right-panel{
+    width:100%;
+    margin:0;
+    padding:18px 18px 8px;
+}
+
+.app-header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    margin: 0 0 20px;
+    padding: 0;
+
+    text-align: center;
+}
+
+.burger-button{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:absolute;
+
+    left:12px;
+    top:12px;
+
+    width:42px;
+    height:42px;
+
+    margin:0;
+}
+
+.app-header h1 {
+    width: 100%;
+    text-align: center;
+}
+
+  .header-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+  }
+
+}
+
+/* ===========================
+   OVERLAY BURGER
+=========================== */
+
+.menu-overlay {
+
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.18);
+
+  z-index: 1400;
+
+}
+
+/* ===========================
+   DESKTOP
+=========================== */
+
+@media (min-width: 951px) {
+
+  .burger-button {
+    display: none;
+  }
+
+  .left-panel {
+
+    transform: none !important;
+
+    position: static;
+
+    width: auto;
+
+    height: auto;
+
+    overflow: visible;
+
+  }
+
+}
+
+/* ===========================
+   ABSENTS
+=========================== */
+
+.absent-row {
+
+  color: #666;
+
+  opacity: .55;
+
+}
+
+/* ===========================
+   LOGIN
+=========================== */
+
+.login-page {
+
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+}
+
+.login-card {
+
+  width: 420px;
+
+  background: #0b0b0b;
+
+  border: 2px solid #00ff88;
+
+  border-radius: 10px;
+
+  padding: 40px;
+
+  text-align: center;
+
+}
+
+.login-card select {
+
+  width: 100%;
+
+  margin-top: 20px;
+
+  padding: 12px;
+
+  background: #111;
+
+  color: #00ff88;
+
+  border: 2px solid #00ff88;
+
+  border-radius: 8px;
+
+  font-family: inherit;
+
+  font-size: 16px;
+
+}
+
+.login-card button {
+
+  margin-top: 25px;
+
+}
+
+/* ===========================
+   USER IDENTITY
+=========================== */
+
+.left-panel h2:first-child {
+  text-align: center;
+}
+
+.left-panel button {
+  margin-top: 30px;
+}
+
+/* ===========================
+   FORMULAIRES DU BURGER
+=========================== */
+
+.left-panel fieldset {
+  text-align: center;
+}
+
+.left-panel label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  margin:0;
+  padding:2px 0;
+
+  cursor: pointer;
+}
+
+.left-panel input[type="radio"] {
+  margin: 0;
+}
+
+/* ===========================
+   FORMULAIRES COMPACTS
+=========================== */
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+fieldset label {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin: 0;
+  padding: 2px 0;
+}
+
+fieldset input[type="radio"] {
+  margin: 0;
+}
+
+.left-panel h3{
+    margin:0 0 6px;
+}
+
+.left-panel hr{
+    margin:14px 0;
+}
+
+.separator-row td {
+  padding: 0;
+  height: 0;
+  border: none;
+}
